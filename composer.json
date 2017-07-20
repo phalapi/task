@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.3.3",
         "phalapi/kernal": "2.0.*",
-        "phalapi/notorm": "dev-master"
+        "phalapi/notorm": "2.0.*"
     },
     "autoload": {
         "psr-4": {
