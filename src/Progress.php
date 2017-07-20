@@ -17,7 +17,7 @@ class Progress {
     const MAX_LAST_FIRE_TIME_INTERVAL = 86400;
 
     /**
-     * @var Model_Task_TaskProgress 对数据库的操作
+     * @var PhalApi\Task\Model\TaskProgress 对数据库的操作
      */
     protected $model;
 

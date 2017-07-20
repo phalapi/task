@@ -9,10 +9,6 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-if (!class_exists('Task_MQ_Redis')) {
-    require dirname(__FILE__) . '/../../MQ/Redis.php';
-}
-
 class PhpUnderControl_TaskMQRedis_Test extends PHPUnit_Framework_TestCase
 {
     public $taskMQRedis;
@@ -21,7 +17,7 @@ class PhpUnderControl_TaskMQRedis_Test extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->taskMQRedis = new Task_MQ_Redis();
+        $this->taskMQRedis = new PhalApi\Task\MQ\RedisMQ();
     }
 
     protected function tearDown()

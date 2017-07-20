@@ -7,7 +7,7 @@ use PhalApi\Response\JsonResponse;
 use PhalApi\PhalApi;
 
 /**
- * 本地调度器 Task_Runner_Local
+ * 本地调度器 LocalRunner
  * 
  * - 本地内部调度
  * - 不能在Api请求时进行此调度

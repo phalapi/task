@@ -9,10 +9,6 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-if (!class_exists('Task_MQ_File')) {
-    require dirname(__FILE__) . '/../../MQ/File.php';
-}
-
 class PhpUnderControl_TaskMQFile_Test extends PHPUnit_Framework_TestCase
 {
     public $taskMQFile;
@@ -21,7 +17,7 @@ class PhpUnderControl_TaskMQFile_Test extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->taskMQFile = new Task_MQ_File();
+        $this->taskMQFile = new PhalApi\Task\MQ\FileMQ();
     }
 
     protected function tearDown()

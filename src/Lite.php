@@ -13,7 +13,7 @@ use PhalApi\Exception\InternalServerErrorException;
 class Lite {
 
     /**
-     * Task_MQ $mq MQ队列
+     * PhalApi\Task\MQ $mq MQ队列
      */
     protected $mq;
 

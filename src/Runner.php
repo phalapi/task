@@ -26,7 +26,7 @@ abstract class Runner {
     protected $step;
 
     /**
-     * @param Task_MQ $mq MQ队列实例
+     * @param PhalApi\Task\MQ $mq MQ队列实例
      * @param int $step 批次的数据，步长
      */
     public function __construct(MQ $mq, $step = 10) {

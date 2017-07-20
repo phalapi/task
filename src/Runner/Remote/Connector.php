@@ -2,7 +2,7 @@
 namespace PhalApi\Task\Runner\Remote;
 
 /**
- * 远程接口连接器 Task_Runner_Remote_Connector
+ * 远程接口连接器 Connector
  * 
  * @author dogstar <chanzonghuang@gmail.com> 20150516
  */

@@ -9,10 +9,6 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-if (!class_exists('Task_MQ_Memcached')) {
-    require dirname(__FILE__) . '/../../MQ/Memcached.php';
-}
-
 class PhpUnderControl_TaskMQMemcached_Test extends PHPUnit_Framework_TestCase
 {
     public $taskMQMemcached;
@@ -21,7 +17,7 @@ class PhpUnderControl_TaskMQMemcached_Test extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->taskMQMemcached = new Task_MQ_Memcached();
+        $this->taskMQMemcached = new PhalApi\Task\MQ\MemcachedMQ();
     }
 
     protected function tearDown()

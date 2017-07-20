@@ -1,7 +1,7 @@
 <?php
 namespace PhalApi\Task\MQ;
 
-use PhalApi\Task\KeyValueMQ;
+use PhalApi\Task\MQ\KeyValueMQ;
 use PhalApi\Cache;
 use PhalApi\Cache\MemcacheCache;
 use PhalApi\Cache\MemcachedCache;

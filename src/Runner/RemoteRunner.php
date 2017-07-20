@@ -8,7 +8,7 @@ use PhalApi\Task\Runner\Remote\Connector\HttpConnector;
 use PhalApi\Exception\InternalServerErrorException;
 
 /**
- * 远程调度器 Task_Runner_Remote
+ * 远程调度器 RemoteRunner
  * 
  * - 通过远程请求接口实现任务调度
  * 
@@ -18,7 +18,7 @@ use PhalApi\Exception\InternalServerErrorException;
 class RemoteRunner extends Runner {
 
 	/**
-	 * @var Task_Runner_Remote_Connector 远程接口连接器实例
+	 * @var PhalApi\Task\Runner\Remote\Connector 远程接口连接器实例
 	 */
     protected $contector;
 
@@ -52,8 +52,8 @@ class RemoteRunner extends Runner {
         $rs = $this->contector->request($service, $params, $this->timeoutMS);
 
         if ($this->contector->getRet() == 404) {
-            throw InternalServerErrorException('task request api time out',
-                array('url' => $this->contector->getUrl()));
+            throw new InternalServerErrorException(\PhalApi\T('task request api time out',
+                array('url' => $this->contector->getUrl())));
         }
 
         $isOk = $this->contector->getRet() == 200 ? TRUE : FALSE;
