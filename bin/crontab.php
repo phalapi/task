@@ -1,11 +1,13 @@
 <?php
-require_once dirname(__FILE__) . '/../../Public/init.php';
-//require_once '/home/dogstar/projects/library.phalapi.net/Public/init.php';
+/**
+ * 计划任务入口示例
+ */
 
-DI()->loader->addDirs(array('Demo', 'Library', 'Library/Task/Task'));
+require_once dirname(__FILE__) . '/path/to/autoload.php';
+require_once '/path/to/phalapi/config/di.php';
 
 try {
-    $progress = new Task_Progress();
+    $progress = new PhalApi\Task\Progress();
     $progress->run();
 } catch (Exception $ex) {
     echo $ex->getMessage();
